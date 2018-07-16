@@ -57,10 +57,9 @@ app.use((err, req, res, next) => {
   res.json(err);
 });
 
-statistics();
 // Check all approved bookings and send notification before 48 hours to start event
-/*cron.schedule(config.cron.day.statistics, () => {
+cron.schedule(config.cron.day.statistics, () => {
   statistics();
-});*/
+});
 
 module.exports = app;
