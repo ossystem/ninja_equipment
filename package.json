@@ -1,0 +1,42 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "create": "node_modules/.bin/sequelize db:create",
+    "drop": "node_modules/.bin/sequelize db:drop",
+    "sync": "node ./syncDB force",
+    "fill": "node_modules/.bin/sequelize db:seed:all",
+    "start": "nodemon ./bin/www",
+    "doc_generate": "./node_modules/.bin/swagger-jsdoc -d swaggerDef.js ./app/*.js -o swagger.yml"
+  },
+  "dependencies": {
+    "acl": "^0.4.11",
+    "acl-sequelize": "^0.2.0",
+    "array-unique": "~0.3.2",
+    "body-parser": "~1.17.2",
+    "console-stamp": "~0.2.5",
+    "cookie-parser": "~1.4.3",
+    "cors": "~2.8.4",
+    "debug": "~2.6.8",
+    "deepmerge": "~1.5.0",
+    "express": "~4.15.3",
+    "html-pdf": "^2.2.0",
+    "jsonwebtoken": "~7.4.1",
+    "morgan": "~1.8.2",
+    "mysql": "^2.15.0",
+    "mysql2": "^1.5.1",
+    "node-cron": "~1.2.0",
+    "nodemailer": "^4.6.7",
+    "sequelize": "^4.32.2",
+    "sequelize-cli": "^3.2.0",
+    "swagger-jsdoc": "^1.9.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0",
+    "eslint": "^4.17.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-extjs": "0.0.3",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}

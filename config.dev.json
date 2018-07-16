@@ -1,0 +1,63 @@
+{
+    "cors": {
+        "enabled": true,
+        "allowedOrigin": "*",
+        "allowedMethods": [
+            "GET",
+            "POST",
+            "PUT",
+            "OPTIONS",
+            "DELETE",
+            "PATCH"
+        ],
+        "allowedHeaders": [
+            "Accept",
+            "Authorization",
+            "Content-Type",
+            "Origin",
+            "X-Requested-With"
+        ]
+    },
+
+    "cron": {
+        "day": {
+            "statistics": "0 8 * * *"
+        }
+    },
+
+    "database": {
+        "host": "host",
+        "database": "databasename",
+        "username": "user",
+        "password": "password",
+        "dialect": "mysql",
+        "logging": true,
+        "timeout": 30000,
+        "pool": {
+          "max": 50
+        },
+        "define": {
+            "charset": "utf8",
+            "dialectOptions": {
+                "collate": "utf8_general_ci"
+            },
+            "underscored": true,
+            "underscoredAll": true,
+            "paranoid": true
+        }
+    },
+
+    "mail": {
+        "service": "gmail",
+        "auth": {
+            "user": "test@gmail.com",
+            "pass": "1"
+        }
+    },
+
+    "session": {
+        "secret": "62P59nE68F38q0q2wvHho58oR38aY7U9",
+        "duration": 86400,
+        "readonly": false
+    }
+}
